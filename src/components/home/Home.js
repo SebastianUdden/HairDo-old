@@ -12,9 +12,14 @@ import { useUser } from "../../contexts/UserContext"
 import { PRIMARY, SURFACE, HIGH_EMPHASIS } from "../../constants/theme"
 
 const Wrapper = styled.div`
+  display: flex;
   background: ${SURFACE};
   padding: 1rem;
 `
+const CardWrapper = styled.div`
+  width: 100%;
+`;
+
 const H1 = styled.h1`
   opacity: ${HIGH_EMPHASIS};
 `
@@ -39,29 +44,20 @@ const Home = () => {
 
   return (
     <Wrapper>
-      {JSON.stringify(card)}
+      <CardWrapper>
       <Card
-        title="Hey"
-        secondaryText="This"
-        supportingText="Another text"
+        title="Him"
+        size="100%"
         onUpdate={value => setCard(value)}
       />
-      <H1>
-        Hey{" "}
-        <Em>{(user.loggedIn && (user.username || user.email)) || "buddy"}</Em>!
-      </H1>
-      <P>
-        Welcome to the development project of HairDo, may all your dreams come true
-        <SVG {...forward30} size={18} color={PRIMARY} />
-        <SVG {...rocket} size={18} color={PRIMARY} /> below...
-      </P>
-      <SVGWrapper
-        onClick={() => {
-          setPage("signup")
-        }}
-      >
-        <SVG {...rocketColored} size={240} />
-      </SVGWrapper>
+      </CardWrapper>
+      <CardWrapper>
+      <Card
+        title="Her"
+        size="100%"
+        onUpdate={value => setCard(value)}
+      />
+      </CardWrapper>
     </Wrapper>
   )
 }
