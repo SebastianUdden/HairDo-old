@@ -9,6 +9,7 @@ const TileWrapper = styled.div`
   background-size: contain;
   justify-content: center;
   align-items: flex-end;
+  text-shadow: 1px #ffffff;
   cursor: pointer;
   :hover {
     h2 {

@@ -7,6 +7,7 @@ import hairMedium from "../../images/hair-medium.png"
 import hairShort from "../../images/hair-short.png"
 import hairPonyTail from "../../images/hair-ponytail.png"
 import hairUpdo from "../../images/hair-updo.png"
+import { CATEGORY_PAGES } from "../../constants/fields"
 
 const Wrapper = styled.div`
   display: flex;
@@ -37,39 +38,34 @@ const Home = () => {
   return (
     <>
       <Grid
-        items={[
-          {
-            title: "Him",
-            imageUrl:
-              "https://lh3.googleusercontent.com/proxy/-CTC7sxRfRYX09IBjCm1AQT_Hf_Poc4FUIZdf0SAlsSMWRofoookKoblUeAyKmt6342MxXDH6YxmhEb1N2Zc9SDgyiWZjs7WSgH4aPhrrjSWumN9wbaxPoCBlwHdSJXJ3D0",
-            onClick: title => setPage(title),
-          },
-          {
-            title: "Her",
-            imageUrl:
-              "https://cdn1.iconfinder.com/data/icons/avatars-1-5/136/87-512.png",
-            onClick: title => setPage(title),
-          },
-        ]}
+        items={CATEGORY_PAGES.filter(
+          page => page.title === "Him" || page.title === "Her"
+        ).map(page => ({ ...page, onClick: title => setPage(title) }))}
       />
       <Grid
-        items={[
-          {
-            title: "Short",
-            imageUrl: hairShort,
-            onClick: title => setPage(title),
-          },
-          {
-            title: "Medium",
-            imageUrl: hairMedium,
-            onClick: title => setPage(title),
-          },
-          {
-            title: "Long",
-            imageUrl: hairLong,
-            onClick: title => setPage(title),
-          },
-        ]}
+        items={CATEGORY_PAGES.filter(
+          page =>
+            page.title === "Short" ||
+            page.title === "Medium" ||
+            page.title === "Long"
+        ).map(page => ({ ...page, onClick: title => setPage(title) }))}
+        // items={[
+        //   {
+        //     title: "Short",
+        //     imageUrl: hairShort,
+        //     onClick: title => setPage(title),
+        //   },
+        //   {
+        //     title: "Medium",
+        //     imageUrl: hairMedium,
+        //     onClick: title => setPage(title),
+        //   },
+        //   {
+        //     title: "Long",
+        //     imageUrl: hairLong,
+        //     onClick: title => setPage(title),
+        //   },
+        // ]}
       />
       <Grid
         items={[

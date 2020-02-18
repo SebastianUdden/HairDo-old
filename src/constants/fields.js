@@ -1,6 +1,45 @@
+import hairLong from "../images/hair-long.png"
+import hairMedium from "../images/hair-medium.png"
+import hairShort from "../images/hair-short.png"
+import hairPonyTail from "../images/hair-ponytail.png"
+import hairUpdo from "../images/hair-updo.png"
+
 /* eslint no-useless-escape: 0 */
 const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[0-9])(?=.*[!@#:;_\-\$%\^&\*])(?=.{8,})/
+
+export const CATEGORY_PAGES = [
+  {
+    title: "Him",
+    imageUrl:
+      "https://lh3.googleusercontent.com/proxy/-CTC7sxRfRYX09IBjCm1AQT_Hf_Poc4FUIZdf0SAlsSMWRofoookKoblUeAyKmt6342MxXDH6YxmhEb1N2Zc9SDgyiWZjs7WSgH4aPhrrjSWumN9wbaxPoCBlwHdSJXJ3D0",
+  },
+  {
+    title: "Her",
+    imageUrl:
+      "https://cdn1.iconfinder.com/data/icons/avatars-1-5/136/87-512.png",
+  },
+  {
+    title: "Short",
+    imageUrl: hairShort,
+  },
+  {
+    title: "Medium",
+    imageUrl: hairMedium,
+  },
+  {
+    title: "Long",
+    imageUrl: hairLong,
+  },
+  {
+    title: "Ponytail",
+    imageUrl: hairPonyTail,
+  },
+  {
+    title: "Updo",
+    imageUrl: hairUpdo,
+  },
+]
 
 export const SIGNUP_FIELDS = [
   {

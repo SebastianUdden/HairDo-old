@@ -3,10 +3,10 @@ import styled from "styled-components"
 
 const Wrapper = styled.div``
 const Img = styled.img`
-  width: 10rem;
+  width: 7rem;
 `
 const H1 = styled.h1`
-  font-size: 50px;
+  font-size: 30px;
   margin-left: 1rem;
 `
 const FlexWrapper = styled.div`
