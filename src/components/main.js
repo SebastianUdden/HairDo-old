@@ -8,19 +8,16 @@ import Login from "./user/Login"
 import Settings from "./user/Settings"
 import Footer from "./footer/footer"
 
-import {
-  LOGIN_FIELDS,
-  SIGNUP_FIELDS,
-  CATEGORY_PAGES,
-} from "../constants/fields"
+import { LOGIN_FIELDS, SIGNUP_FIELDS } from "../constants/fields"
 import Category from "./category/Category"
+import { CATEGORY_DATA } from "../constants/categoryData"
 
 const Body = styled.div`
   margin-bottom: 10vh;
 `
 
 const getData = page =>
-  CATEGORY_PAGES.find(categoryPage => categoryPage.title === page)
+  CATEGORY_DATA.find(categoryPage => categoryPage.title === page)
 
 const checkIsCategoryPage = page => {
   if (

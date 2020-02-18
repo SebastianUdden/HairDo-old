@@ -1,20 +1,20 @@
 import React from "react"
 import styled from "styled-components"
-import Tile from "./Tile"
+import Card from "./Card"
 
 const Wrapper = styled.div`
   display: flex;
   flex-wrap: ${p => (p.wrap ? "wrap" : "no-wrap")};
 `
 
-const Grid = ({ items, wrap }) => {
+const CardGrid = ({ items, wrap = true }) => {
   return (
     <Wrapper wrap={wrap}>
       {items.map(item => (
-        <Tile {...item} />
+        <Card title={item.title} imageUrl={item.imageUrl} />
       ))}
     </Wrapper>
   )
 }
 
-export default Grid
+export default CardGrid

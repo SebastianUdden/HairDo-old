@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import CardGrid from "./CardGrid"
 
 const Wrapper = styled.div``
 const Img = styled.img`
@@ -14,13 +15,14 @@ const FlexWrapper = styled.div`
   align-items: center;
 `
 
-const Category = ({ title, imageUrl }) => {
+const Category = ({ title, imageUrl, articles }) => {
   return (
     <Wrapper>
       <FlexWrapper>
         <Img src={imageUrl} />
         <H1>{title}</H1>
       </FlexWrapper>
+      <CardGrid items={articles} />
     </Wrapper>
   )
 }
