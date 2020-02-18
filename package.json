@@ -1,8 +1,8 @@
 {
-  "name": "project-pillow-progressive-web-app",
+  "name": "hair-do",
   "private": true,
-  "description": "A PWA starter kit",
-  "version": "0.2.0",
+  "description": "The guide to your hairstyle",
+  "version": "0.1.0",
   "author": "Sebastian Uddén <sebastian.udden@gmail.com>",
   "dependencies": {
     "gatsby": "^2.15.19",

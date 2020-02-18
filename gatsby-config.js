@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `PWA Context`,
-    description: `The Progressive Web App starter pack, go make awesome stuff with it.`,
+    title: `HairDo`,
+    description: `The guide to your hairstyle.`,
     author: `@SebastianUdden`,
   },
   plugins: [
@@ -18,8 +18,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Progressive Web App - Context`,
-        short_name: `PWA Context`,
+        name: `HairDo - The guide to your hairstyle`,
+        short_name: `HairDo`,
         start_url: `/`,
         background_color: `#121212`,
         theme_color: `#16242C`,

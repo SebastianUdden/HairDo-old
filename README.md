@@ -1,48 +1,8 @@
 <h1 align="center">
-  Progressive Web App Template
+  HairDo - The guide to your hairstyle
 </h1>
 
 ## 🚀 Quick start
-
-1.  **Clone the project**
-
-    Copy the git url and do `git clone git-url project-name` from your repository folder
-
-1.  **Start developing**
-
-    Navigate into your new site’s directory, remove old git, install dependencies and start it up.
-
-    ```shell
-    cd project-name/
-    rm -rf .git
-    npm install
-    npm start
-    ```
-
-1.  **Open the source code and start editing!**
-
-    Your site is now running at `http://localhost:8000`!
-
-    To edit the content run `code .` from your `project-name` folder. Edit `src/pages/index.js`, then save your changes and the browser will update in real time!
-
-1.  **💫 Deploy to github**
-
-    When you are happy with your changes
-
-    1. Go to `https://github.com/user-name?tab=repositories`
-    1. Click the `New` button
-    1. Select a repository name that matches your project-name
-    1. Keep default settings; public and don't initialize with readme
-    1. Open your project-name folder in the terminal and run the following
-
-    ```shell
-    cd project-name/
-    git init
-    git add -A
-    git commit -m "Initial commit"
-    git remote add origin https://github.com/user-name/project-name.git
-    git push -u origin master
-    ```
 
 1.  **💫 Deploy to netlify**
 
