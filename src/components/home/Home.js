@@ -51,8 +51,7 @@ const Home = () => {
         <Em>{(user.loggedIn && (user.username || user.email)) || "buddy"}</Em>!
       </H1>
       <P>
-        This will be the base of many awesome apps! Try out react context with a
-        clientside <Em>signup</Em> by clicking the{" "}
+        Welcome to the development project of HairDo, may all your dreams come true
         <SVG {...forward30} size={18} color={PRIMARY} />
         <SVG {...rocket} size={18} color={PRIMARY} /> below...
       </P>
