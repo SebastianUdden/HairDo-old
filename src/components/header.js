@@ -15,8 +15,7 @@ import {
 import { useUser } from "../contexts/UserContext"
 
 const Wrapper = styled.header`
-  background: ${BACKGROUND};
-  box-shadow: ${DP6};
+  background: ${PRIMARY_BACKGROUND};
   margin-bottom: 1.45rem;
 `
 
@@ -34,7 +33,8 @@ const Home = styled.h1`
 `
 
 const MainLink = styled(Link)`
-  color: ${ON_SURFACE};
+  color: #ffffff;
+  text-shadow: 1px 1px #cccccc;
   opacity: ${HIGH_EMPHASIS};
   text-decoration: none;
   cursor: pointer;

@@ -13,6 +13,8 @@ const Wrapper = styled.footer`
   left: 0;
   width: 100%;
   height: 10vh;
+  background-color: #dddddd;
+  padding: 1rem;
 `
 
 const ButtonContainer = styled.div`
@@ -39,11 +41,12 @@ const Footer = ({ items }) => {
   return (
     <Wrapper>
       <ButtonContainer>
-        {items.map(item => (
+        <h3>FAQ</h3>
+        {/* {items.map(item => (
           <Item key={item.title} onClick={() => item.onClick()}>
             {item.title}
           </Item>
-        ))}
+        ))} */}
       </ButtonContainer>
     </Wrapper>
   )

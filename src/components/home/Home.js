@@ -1,42 +1,41 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-
-import { SVG } from "../svg/svg"
-import {
-  Card,
-  rocket,
-  rocketColored,
-  forward30,
-} from "project-pillow-components"
 import { useUser } from "../../contexts/UserContext"
 import { PRIMARY, SURFACE, HIGH_EMPHASIS } from "../../constants/theme"
 
 const Wrapper = styled.div`
   display: flex;
-  background: ${SURFACE};
   padding: 1rem;
 `
-const CardWrapper = styled.div`
-  width: 100%;
-`;
 
-const H1 = styled.h1`
-  opacity: ${HIGH_EMPHASIS};
-`
-const P = styled.p`
-  opacity: ${HIGH_EMPHASIS};
-`
-const Em = styled.em`
-  color: ${PRIMARY};
-  font-style: normal;
-`
-const SVGWrapper = styled.div`
-  padding: 0;
-  margin: 0;
+const TileWrapper = styled.div`
+  width: 100%;
   display: flex;
+  height: 23rem;
+  background: ${p => `url(${p.imageUrl})`} no-repeat center;
+  background-size: contain;
   justify-content: center;
+  align-items: flex-end;
   cursor: pointer;
+  :hover {
+    h2 {
+      border-bottom: 1px solid black;
+      margin-bottom: 25px;
+    }
+  }
 `
+const Title = styled.h2`
+  text-align: center;
+  font-size: 40px;
+`
+
+const Tile = ({ title, imageUrl, onClick }) => {
+  return (
+    <TileWrapper imageUrl={imageUrl} onClick={() => onClick(title)}>
+      <Title>{title}</Title>
+    </TileWrapper>
+  )
+}
 
 const Home = () => {
   const { user, setPage } = useUser()
@@ -44,20 +43,16 @@ const Home = () => {
 
   return (
     <Wrapper>
-      <CardWrapper>
-      <Card
+      <Tile
         title="Him"
-        size="100%"
-        onUpdate={value => setCard(value)}
+        imageUrl="https://lh3.googleusercontent.com/proxy/-CTC7sxRfRYX09IBjCm1AQT_Hf_Poc4FUIZdf0SAlsSMWRofoookKoblUeAyKmt6342MxXDH6YxmhEb1N2Zc9SDgyiWZjs7WSgH4aPhrrjSWumN9wbaxPoCBlwHdSJXJ3D0"
+        onClick={title => setPage(title)}
       />
-      </CardWrapper>
-      <CardWrapper>
-      <Card
+      <Tile
         title="Her"
-        size="100%"
-        onUpdate={value => setCard(value)}
+        imageUrl="https://cdn1.iconfinder.com/data/icons/avatars-1-5/136/87-512.png"
+        onClick={title => setPage(title)}
       />
-      </CardWrapper>
     </Wrapper>
   )
 }
